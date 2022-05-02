@@ -12,9 +12,13 @@ const ListUsers = () => {
   }, []);
   return (
     <div className="col-8 row gy-4">
-      {users.map((user) => (
-        <User user={user} />
-      ))}
+      {loading ? (
+        <h1>Loading...</h1>
+      ) : users.length ? (
+        users.map((user) => <User key={user.email} user={user} />)
+      ) : (
+        <h1>No users</h1>
+      )}
     </div>
   );
 };

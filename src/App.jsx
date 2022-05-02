@@ -14,7 +14,7 @@ function App() {
         </div>
       </nav>
       <div className="container">
-        <div class="row">
+        <div className="row">
           <ListUsers />
           <FormUsers />
         </div>
