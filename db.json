@@ -31,34 +31,10 @@
       "id": 5
     },
     {
+      "id": 6,
       "first_name": "Luis",
       "last_name": "Ramos",
-      "email": "luis@gmail.com",
-      "id": 6
-    },
-    {
-      "first_name": "Dante",
-      "last_name": "Leon",
-      "email": "dante@gmail.com",
-      "id": 7
-    },
-    {
-      "first_name": "Alberto",
-      "last_name": "Cervantes",
-      "email": "alberto@gmail.com",
-      "id": 8
-    },
-    {
-      "id": 9,
-      "first_name": "Walter",
-      "last_name": "Perez",
-      "email": "aldoasd@gmail.com"
-    },
-    {
-      "first_name": "asdasdasda",
-      "last_name": "asdasdas",
-      "email": "asdasda@gmail.com",
-      "id": 10
+      "email": "luis@gmail.com"
     }
   ]
 }

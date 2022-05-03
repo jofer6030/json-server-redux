@@ -30,10 +30,20 @@ const userSlice = createSlice({
       });
       state.user = null;
     },
+    deleteUserSucces: (state, action) => {
+      state.users = state.users.filter((user) => user.id !== action.payload.id);
+      state.user = null;
+    },
   },
 });
 
-export const { reqUser, listUserSuccess, newUser, getUserEdit, editUser } =
-  userSlice.actions;
+export const {
+  reqUser,
+  listUserSuccess,
+  newUser,
+  getUserEdit,
+  editUser,
+  deleteUserSucces,
+} = userSlice.actions;
 
 export default userSlice.reducer;

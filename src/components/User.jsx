@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { deleteUser } from "../redux/actions/user";
 import { getUserEdit } from "../redux/reducers/user";
 
 const User = ({ user }) => {
@@ -7,6 +8,11 @@ const User = ({ user }) => {
   const handleEdit = () => {
     dispatch(getUserEdit(user));
   };
+
+  const handleDelete = () => {
+    dispatch(deleteUser(user));
+  };
+
   return (
     <div className="col-md-4">
       <div className="card h-100">
@@ -19,7 +25,9 @@ const User = ({ user }) => {
           <button className="btn btn-warning me-4" onClick={handleEdit}>
             Edit
           </button>
-          <button className="btn btn-danger">Delete</button>
+          <button className="btn btn-danger" onClick={handleDelete}>
+            Delete
+          </button>
         </div>
       </div>
     </div>

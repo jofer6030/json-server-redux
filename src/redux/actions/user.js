@@ -1,4 +1,10 @@
-import { reqUser, listUserSuccess, newUser, editUser } from "../reducers/user";
+import {
+  reqUser,
+  listUserSuccess,
+  newUser,
+  editUser,
+  deleteUserSucces,
+} from "../reducers/user";
 
 export const listUsers = () => async (dispatch) => {
   dispatch(reqUser());
@@ -41,6 +47,20 @@ export const updateUser = (user) => async (dispatch) => {
       body: JSON.stringify(user),
     });
     dispatch(editUser(user));
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const deleteUser = (user) => async (dispatch) => {
+  try {
+    await fetch(`http://localhost:4000/profile/${user.id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    dispatch(deleteUserSucces(user));
   } catch (error) {
     console.log(error);
   }

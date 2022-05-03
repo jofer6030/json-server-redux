@@ -48,6 +48,10 @@ const FormUsers = () => {
       setFirstName(user.first_name);
       setLastName(user.last_name);
       setEmail(user.email);
+    } else {
+      setFirstName("");
+      setLastName("");
+      setEmail("");
     }
   }, [user]);
 
